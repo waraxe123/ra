@@ -7,8 +7,8 @@
 """
 ✘ **Bantuan Untuk Pinterest**
 
-๏ **Perintah:** `copy` <link>
-◉ **Keterangan:** Colong media dari ch private.
+➠ **Perintah:** `copy` <link>
+➠ **Keterangan:** Colong media dari ch private.
 """
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -38,12 +38,12 @@ async def copay(event):
     else:
         return await eod(event, "`Berikan link tautan channel atau grup...`")
 
-    xx = await eor(event, "`Processing...`")
-    chat = "@Nyolongbang_bot"
+    xx = await eor(event, "`memproses...`")
+    chat = "@Nyolong_lagi_bot"
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=6152320759)
+                events.NewMessage(incoming=True, from_users=5680104808)
             )
             await event.client.send_message(chat, link)
             response = await response
